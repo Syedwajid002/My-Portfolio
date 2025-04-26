@@ -12,7 +12,7 @@ const HeroSec = () => {
       <button className="bg-[#00cb2c] text-white font-bold px-6 py-2 rounded-md hover:bg-[#00cb2c] hover:text-black transition duration-300 ease-in-out text-sm font-medium">
         <Link to="/wajidsProjects">View Projects</Link>
       </button>
-      <button className="mt-4 bg-gray-300 text-black font-bold  py-2 rounded-md hover:bg-[#00cb2c] hover:text-black transition duration-300 ease-in-out text-sm font-medium px-8">
+      <button className="md:hidden mt-4 bg-gray-300 text-black font-bold  py-2 rounded-md hover:bg-[#00cb2c] hover:text-black transition duration-300 ease-in-out text-sm font-medium px-8">
         <Link to="/about-Wajid">About Me</Link>
       </button>
     </div>
