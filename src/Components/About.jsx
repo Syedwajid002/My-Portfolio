@@ -12,7 +12,7 @@ const About = () => {
         ← Home
       </a>
       <div className="max-w-4xl mx-auto mb-10 md:flex flex-row items-center justify-between">
-        <div>
+        <div className="max-w-xs mx-auto mb-8 md:mb-0 ml-2">
           <img src={pic} alt="Profile" className="w-76 rounded-full" />
         </div>
         <div className="mb-8 md:mb-0">
