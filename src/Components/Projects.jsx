@@ -34,14 +34,20 @@ const Projects = () => {
               </a>
             </div>
             <div className="md:p-4  rounded-lg">
-              <img src={mjp} alt="" className="rounded-lg" />
+              <a
+                href="https://mjptbcwrdcwomenwargal.ac.in/home"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={mjp} alt="" className="rounded-lg" />
+              </a>
             </div>
           </li>
 
-          <li className="grid md:grid-cols-2 border border-white rounded-xl px-10 py-3 text-center hover:border-[#00cb2c] transition duration-300">
+          <li className="grid md:grid-cols-2 border rounded-xl px-10 py-3 text-center hover:border-[#00cb2c] transition duration-300">
             <div className="justify-center items-center flex flex-col">
               <a
-                href="https://mjptbcwrdcwomenwargal.ac.in/home"
+                href="https://online-shop-two-gamma.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -67,7 +73,13 @@ const Projects = () => {
               </a>
             </div>
             <div className="md:p-4  rounded-lg">
-              <img src={Ecom} alt="" className="rounded-lg" />
+              <a
+                href="https://online-shop-two-gamma.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={Ecom} alt="" className="rounded-lg" />
+              </a>
             </div>
           </li>
         </ul>
