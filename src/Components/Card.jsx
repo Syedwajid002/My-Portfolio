@@ -1,21 +1,30 @@
 import React from "react";
 import pic from "../Assets/logos/pic.jpg";
+
 const Card = () => {
   return (
-    <div className="bg-gray-100">
-      <div className="h-screen flex flex-col items-center justify-center">
-        <p className="text-2xl   text-center font-lights text-gray-800 w-2/3">
-          “I'm syed wajid a skilled Software developer with a focus on creating
-          efficient and high-quality applications. My proficiency in the MERN
-          stack and React Native delivers reliable solutions for both web and
-          mobile platforms.”
+    <section className="bg-gradient-to-b from-gray-950 via-gray-900 to-black py-16 px-6">
+      <div className="max-w-3xl mx-auto text-center">
+        <p className="text-xl sm:text-2xl text-gray-200 font-light leading-relaxed">
+          “I'm{" "}
+          <span className="text-primary-500 font-semibold">Syed Wajid</span>, a
+          skilled Software Developer focused on creating efficient, scalable
+          applications. I specialize in the MERN stack and React Native to
+          deliver robust solutions across web and mobile.”
         </p>
-        <div className="border rounded-xl p-1.5 mt-2 flex items-center justify-around gap-2 hover:bg-gray-300 hover:text-white transition duration-300 ease-in-out">
-          <img src={pic} alt="profile" className="w-10 h-10 rounded-3xl" />
-          <h2 className="text-black aldrich">Syed Wajid</h2>
+
+        <div className="mt-6 inline-flex items-center gap-4 bg-white/5 border border-white/10 px-5 py-3 rounded-xl transition hover:scale-105 hover:bg-white/10">
+          <img
+            src={pic}
+            alt="Syed Wajid"
+            className="w-12 h-12 rounded-full object-cover"
+          />
+          <span className="text-white font-medium tracking-wide text-base">
+            Syed Wajid Pasha
+          </span>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

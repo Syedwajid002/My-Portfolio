@@ -17,6 +17,15 @@ const sectionVariant = {
 const Resume = () => {
   return (
     <main className="bg-gray-900 text-white min-h-screen px-6 py-20 md:px-20">
+      {/* Back to Home */}
+      <div className="max-w-6xl mx-auto px-6 pt-8">
+        <a
+          href="/"
+          className="text-sm text-gray-400 hover:text-white underline transition"
+        >
+          ← Back to Home
+        </a>
+      </div>
       {/* Heading */}
       <motion.header
         variants={sectionVariant}

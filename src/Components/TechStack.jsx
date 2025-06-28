@@ -1,4 +1,8 @@
 import React, { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
+
+// Logo imports
 import reactLogo from "../Assets/logos/react.png";
 import node from "../Assets/logos/node.png";
 import express from "../Assets/logos/express.png";
@@ -9,8 +13,6 @@ import Tailwind from "../Assets/logos/Tailwind.png";
 import reactNative from "../Assets/logos/react-native.png";
 import Firebase from "../Assets/logos/Firebase.png";
 import Java from "../Assets/logos/Java.png";
-import Aos from "aos";
-import "aos/dist/aos.css";
 
 const TechStack = () => {
   useEffect(() => {
@@ -21,7 +23,7 @@ const TechStack = () => {
     { logo: reactLogo, name: "React" },
     { logo: node, name: "Node.js" },
     { logo: express, name: "Express" },
-    { logo: mongo, name: "MongoDB", textSize: "text-sm" },
+    { logo: mongo, name: "MongoDB" },
     { logo: mysql, name: "MySQL" },
     { logo: reactNative, name: "React Native" },
     { logo: TypeScript, name: "TypeScript" },
@@ -31,39 +33,30 @@ const TechStack = () => {
   ];
 
   return (
-    <div className="mt-10 bg-white w-full pt-10" id="Technologies">
-      <h1
-        className="aldrich text-2xl text-black text-center mb-4 "
+    <section
+      id="Technologies"
+      className="w-full py-16 bg-gradient-to-b from-black via-gray-900 to-gray-950"
+    >
+      <h2
+        className="text-3xl font-bold text-center text-white mb-12"
         data-aos="zoom-in"
       >
         My Tech Stack
-      </h1>
+      </h2>
 
-      <div className="flex lg:grid-cols-2 items-center md:flex-row md:justify-between text-black">
-        <div className="w-full">
+      <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 px-6">
+        {techStack.map((tech, index) => (
           <div
-            className="grid md:grid-cols-4 grid-cols-2 mt-5 md:mt-0 p-5 gap-4"
-            data-aos="zoom-in"
+            key={index}
+            className="bg-white/5 hover:bg-white/10 border border-white/10 p-6 rounded-xl shadow-md hover:shadow-lg hover:scale-105 transform transition duration-300 flex flex-col items-center justify-center text-center"
+            data-aos="fade-up"
           >
-            {techStack.map((tech, index) => (
-              <div
-                key={index}
-                className="border rounded-xl p-3 flex items-center justify-around gap-2 hover:bg-gray-300 hover:text-white transition duration-300 ease-in-out"
-              >
-                <img src={tech.logo} alt={tech.name} className="w-10 h-10" />
-                <h2
-                  className={`text-black aldrich ${
-                    tech.textSize ? tech.textSize : "text-base"
-                  }`}
-                >
-                  {tech.name}
-                </h2>
-              </div>
-            ))}
+            <img src={tech.logo} alt={tech.name} className="w-12 h-12 mb-3" />
+            <h3 className="text-sm font-medium text-white">{tech.name}</h3>
           </div>
-        </div>
+        ))}
       </div>
-    </div>
+    </section>
   );
 };
 
