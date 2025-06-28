@@ -1,92 +1,62 @@
 import React from "react";
 import mjp from "../Assets/logos/mjp.png";
 import Ecom from "../Assets/logos/Ecom.png";
+
+const projects = [
+  {
+    title: "MJP Women's College Wargal",
+    description:
+      "I collaborated on building the official website for MJP Women’s Government College as a freelance project. I handled design and development using React.js and Firebase for real-time updates and secure data handling. Tailwind CSS was used for a clean and responsive UI.",
+    link: "https://mjptbcwrdcwomenwargal.ac.in/home",
+    image: mjp,
+  },
+  {
+    title: "E-Commerce Web Application",
+    description:
+      "I independently built a full-stack e-commerce web application using React.js, Node.js, Express, and MongoDB. It includes user auth, product management, shopping cart, and order processing, giving me hands-on experience in scalable, production-ready application development.",
+    link: "https://online-shop-two-gamma.vercel.app/",
+    image: Ecom,
+  },
+];
+
 const Projects = () => {
   return (
-    <div className="bg-[#090b14] min-h-screen flex flex-col items-center justify-center text-white p-6">
-      <h2 className="text-4xl text-center mt-10 mb-6 border-b-2 border-[#00cb2c] inline-block p-2">
+    <div className="bg-[#090b14] min-h-screen py-16 px-6 text-white">
+      <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
         My Recent Projects
       </h2>
 
-      <div className="flex flex-col items-center">
-        <ul className="space-y-4">
-          <li className="grid md:grid-cols-2 border border-white rounded-xl px-10 py-3 text-center hover:border-[#00cb2c] transition duration-300">
-            <div className="justify-center items-center flex flex-col">
-              <a
-                href="https://mjptbcwrdcwomenwargal.ac.in/home"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <h3 className="text-3xl font-bold mb-4">
-                  MJP Womens College Wargal
+      <div className="max-w-6xl mx-auto grid gap-10 md:grid-cols-2">
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className="bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-white/20 transition-all duration-300 shadow-lg hover:shadow-white/10"
+          >
+            <a href={project.link} target="_blank" rel="noopener noreferrer">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="rounded-t-2xl w-full h-64 object-cover"
+              />
+            </a>
+            <div className="p-6">
+              <a href={project.link} target="_blank" rel="noopener noreferrer">
+                <h3 className="text-2xl font-semibold mb-3 hover:underline underline-offset-4 transition">
+                  {project.title}
                 </h3>
-                <p className="text-sm p-4">
-                  I collaborated on building the official website for MJP
-                  Women’s Government College as a freelance project, taking
-                  responsibility for both design and development. The frontend
-                  was developed using React.js, while the backend was powered by
-                  Firebase, ensuring real-time updates and secure data handling.
-                  We focused on creating a clean, responsive UI with Tailwind
-                  CSS, delivering a functional, user-friendly platform that
-                  showcases the college’s vision, departments, faculty, and
-                  student resources.
-                </p>
               </a>
+              <p className="text-sm text-gray-300 leading-relaxed">
+                {project.description}
+              </p>
             </div>
-            <div className="md:p-4  rounded-lg">
-              <a
-                href="https://mjptbcwrdcwomenwargal.ac.in/home"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src={mjp} alt="" className="rounded-lg" />
-              </a>
-            </div>
-          </li>
+          </div>
+        ))}
+      </div>
 
-          <li className="grid md:grid-cols-2 border rounded-xl px-10 py-3 text-center hover:border-[#00cb2c] transition duration-300">
-            <div className="justify-center items-center flex flex-col">
-              <a
-                href="https://online-shop-two-gamma.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <h3 className="text-3xl font-bold mb-4">
-                  E-Commerce Web Application
-                </h3>
-                <p className="text-sm p-4">
-                  I independently built a full-stack e-commerce web application
-                  to gain a deep, hands-on understanding of how different
-                  technologies and frameworks work together in real-world
-                  projects. Through this project, I explored the complete
-                  development lifecycle — from building the frontend using
-                  React.js to creating a RESTful backend with Node.js and
-                  Express.js, and managing data using MongoDB. I focused on
-                  implementing key functionalities like user authentication,
-                  product management, shopping cart, and order processing, which
-                  helped me truly understand the interaction between frontend
-                  and backend systems. This project greatly strengthened my
-                  skills in API development, state management, database
-                  integration, and responsive design, giving me practical
-                  knowledge of building scalable, production-ready applications.
-                </p>
-              </a>
-            </div>
-            <div className="md:p-4  rounded-lg">
-              <a
-                href="https://online-shop-two-gamma.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src={Ecom} alt="" className="rounded-lg" />
-              </a>
-            </div>
-          </li>
-        </ul>
-
+      <div className="text-center mt-12">
         <a
           href="/"
-          className="mt-8 text-sm text-gray-300 hover:text-white underline transition"
+          className="text-sm text-gray-400 hover:text-white underline transition"
         >
           ← Back
         </a>

@@ -13,11 +13,11 @@ const Navbar = () => {
 
         {/* Links */}
         <ul className="flex flex-col md:flex-row items-center gap-4 text-gray-400 mt-4 md:mt-0 hidden md:flex">
-          <li>
-            <ProjectsDD />
-          </li>
           <li className="py-2 md:py-0 cursor-pointer hover:text-white transition">
             <Link to="/about-Wajid">About</Link>
+          </li>
+          <li className="py-2 md:py-0 cursor-pointer hover:text-white transition">
+            <Link to="/resume">Resume</Link>
           </li>
         </ul>
 
