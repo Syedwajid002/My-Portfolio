@@ -1,8 +1,16 @@
 import React from "react";
 import mjp from "../Assets/logos/mjp.png";
 import Ecom from "../Assets/logos/Ecom.png";
-
+import hvra from "../Assets/logos/hvra.png";
+import nifa from "../Assets/logos/nifa.png";
 const projects = [
+  {
+    title: "High Value Recruitment Agency",
+    description:
+      "I built a professional website for HVRA, working directly with the CEO to deliver a clean, responsive, and conversion-focused platform. The site was developed using React.js,TypeScript,Tailwind CSS and Framer Motion. It showcases the agency’s services, job listings, and contact workflows tailored for international recruitment.",
+    link: "https://hvrasolutions.com", // Replace with actual link
+    image: hvra, // Replace with actual image import reference
+  },
   {
     title: "MJP Women's College Wargal",
     description:
@@ -16,6 +24,13 @@ const projects = [
       "I independently built a full-stack e-commerce web application using React.js, Node.js, Express, and MongoDB. It includes user auth, product management, shopping cart, and order processing, giving me hands-on experience in scalable, production-ready application development.",
     link: "https://online-shop-two-gamma.vercel.app/",
     image: Ecom,
+  },
+  {
+    title: "Nifa's Portfolio Website",
+    description:
+      "I designed and developed a sleek and responsive personal portfolio website for Nifa, showcasing her skills, projects, and experience in a professional layout. Built with React.js and Tailwind CSS, the site features smooth animations, section-based navigation, and is fully optimized for mobile and desktop viewing. Hosted on Vercel for fast global performance.",
+    link: "https://nifa-s-portfolio.vercel.app/",
+    image: nifa, // Replace with actual image reference
   },
 ];
 
