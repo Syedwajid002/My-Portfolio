@@ -26,7 +26,7 @@ const Hero = () => {
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="/Wajid Resume.pdf"
+            href="/wajid's Resume.pdf"
             download
             className="inline-flex items-center bg-white/10 hover:bg-white/20 border border-white/10 text-white px-6 py-3 rounded-md text-sm font-medium transition"
           >

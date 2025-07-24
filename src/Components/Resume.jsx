@@ -256,7 +256,7 @@ const Resume = () => {
         viewport={{ once: true }}
       >
         <a
-          href="/Wajid Resume.pdf"
+          href="/wajid's Resume.pdf"
           download
           className="inline-flex items-center bg-primary-500  hover:bg-white/20 border border-white/10 text-white font-medium px-6 py-3 rounded-md transition duration-300"
         >
